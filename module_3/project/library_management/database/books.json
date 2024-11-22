@@ -1,0 +1,26 @@
+[
+    {
+        "Title": "C Programming",
+        "Authors": "Abdullah",
+        "ISBN": "221",
+        "Year": "2022",
+        "Price": 500.0,
+        "Quantity": 10
+    },
+    {
+        "Title": "Java Programming",
+        "Authors": "Mahmud",
+        "ISBN": "223",
+        "Year": "2021",
+        "Price": 400.0,
+        "Quantity": 8
+    },
+    {
+        "Title": "Dart Programming",
+        "Authors": "Moin",
+        "ISBN": "225",
+        "Year": "2020",
+        "Price": 1000.0,
+        "Quantity": 600
+    }
+]
