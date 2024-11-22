@@ -1,17 +1,17 @@
 import json
 
-DATA_FILE = "module_3/project/library_management/database/books.json"
+database = "module_3/project/library_management/database/books.json"
 
 
 def load_books():
     try:
-        with open(DATA_FILE, "r") as file:
+        with open(database, "r") as file:
             return json.load(file)
     except FileNotFoundError:
         return []
 
 def save_books(books):
-    with open(DATA_FILE, "w") as file:
+    with open(database, "w") as file:
         json.dump(books, file, indent=4)
 
 
@@ -92,8 +92,6 @@ def remove_book():
             return
     print("Book not found.")
 
-
-# Main menu
 def main():
     while True:
         print("\nLibrary Management System")
