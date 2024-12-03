@@ -1,7 +1,7 @@
 import json
 
 
-database = "module_5\project\contact_management\database\contact_data.json"
+database = "module_5\project\contact_management_system\database\contact_data.json"
 
 def load_contact():
     try:
