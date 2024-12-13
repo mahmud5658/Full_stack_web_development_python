@@ -2,27 +2,26 @@ import json
 import datetime
 from tabulate import tabulate
 
-
+file_path2 = "module_6\project\Library_management\database\lend_books.json"
 def load_lend_books():
     try:
-        with open("lend_books.json", "r") as file:
+        with open(file_path2, "r") as file:
             return json.load(file)
     except FileNotFoundError:
         return []
 
 
 def save_lend_books(lend_books):
-    with open("lend_books.json", "w") as file:
+    with open(file_path2, "w") as file:
         json.dump(lend_books, file, indent=4)
 
 
 def lend_book(book_title, borrower_name, borrower_phone, return_due_date):
     lend_books = load_lend_books()
 
-    # Convert return due date to a datetime object
+
     due_date = datetime.datetime.strptime(return_due_date, "%Y-%m-%d")
 
-    # Save lending details
     lend_books.append(
         {
             "borrower_name": borrower_name,
@@ -44,7 +43,6 @@ def return_book(book_title):
 def view_lended_books():
     lend_books = load_lend_books()
 
-    # Create a list of lending details to display in tabular format
     lend_data = []
     for lend in lend_books:
         lend_data.append(
@@ -56,7 +54,6 @@ def view_lended_books():
             ]
         )
 
-    # Print the table
     print(
         "\n"
         + tabulate(

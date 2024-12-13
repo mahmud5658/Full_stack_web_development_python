@@ -1,0 +1,20 @@
+[
+    {
+        "borrower_name": "Abdullah Al Mahmud",
+        "borrower_phone": "01705113009",
+        "book_title": "C Programming",
+        "due_date": "2024-12-20"
+    },
+    {
+        "borrower_name": "Nafiur Rahman Sabbir",
+        "borrower_phone": "01749529219",
+        "book_title": "Java Programming",
+        "due_date": "2024-12-24"
+    },
+    {
+        "borrower_name": "Abdullah Al Mahmud",
+        "borrower_phone": "01611233016",
+        "book_title": "Python Programming",
+        "due_date": "2024-12-25"
+    }
+]

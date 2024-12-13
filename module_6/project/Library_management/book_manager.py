@@ -1,16 +1,17 @@
 import json
 
-
+file_path1 = "module_6\project\Library_management\database\\books.json"
 def load_books():
     try:
-        with open("books.json", "r") as file:
+        with open(file_path1, "r"
+        ) as file:
             return json.load(file)
     except FileNotFoundError:
         return []
 
 
 def save_books(books):
-    with open("books.json", "w") as file:
+    with open(file_path1, "w") as file:
         json.dump(books, file, indent=4)
 
 

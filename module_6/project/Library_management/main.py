@@ -1,13 +1,14 @@
 import datetime
+from lend_manager import view_lended_books, lend_book, return_book
+from tabulate import tabulate
+from book_manager import load_books
+
 from book_manager import (
     check_book_availability,
     update_book_quantity,
     load_books,
     save_books,
 )
-from lend_manager import lend_book_function, return_book_function, view_lended_books
-from tabulate import tabulate
-
 
 def display_menu():
     print("1. View Books")
@@ -21,12 +22,10 @@ def display_menu():
 def view_books():
     books = load_books()
 
-    # Create a list of books to display in tabular format
     book_data = []
     for book in books:
         book_data.append([book["title"], book["quantity"]])
 
-    # Print the table
     print(
         "\n"
         + tabulate(book_data, headers=["Book Title", "Quantity"], tablefmt="fancy_grid")
@@ -51,10 +50,9 @@ def lend_book_function():
         borrower_phone = input("Enter borrower's phone number: ")
         return_due_date = input("Enter return due date (YYYY-MM-DD): ")
 
-        # Lend the book and save the details
+
         due_date = lend_book(book_title, borrower_name, borrower_phone, return_due_date)
 
-        # Decrease the book quantity
         update_book_quantity(book_title, -1)
         print(
             f"The book '{book_title}' has been lent to {borrower_name}. Due date: {due_date.strftime('%Y-%m-%d')}"
@@ -66,10 +64,9 @@ def lend_book_function():
 def return_book_function():
     book_title = input("Enter the book title to return: ")
 
-    # Return the book and update data
     return_book(book_title)
 
-    # Increase the book quantity
+
     update_book_quantity(book_title, 1)
     print(f"The book '{book_title}' has been returned successfully.")
 

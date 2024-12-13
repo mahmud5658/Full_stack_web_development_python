@@ -5,6 +5,10 @@
     },
     {
         "title": "Java Programming",
-        "quantity": 20
+        "quantity": 19
+    },
+    {
+        "title": "Python Programming",
+        "quantity": 4
     }
 ]
