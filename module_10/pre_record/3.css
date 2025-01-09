@@ -1,0 +1,8 @@
+body{
+    /* background-color: yellow; */
+    background-image: url('https://www.w3schools.com/css/img_lights.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
